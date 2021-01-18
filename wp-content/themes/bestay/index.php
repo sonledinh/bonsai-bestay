@@ -1,13 +1,13 @@
 <?php
 /*
-	Template Name: Index
+	Template Name: Trang chủ
 */
 ?>
 
-<?php get_header();?> 
+<?php get_header();?>  
 
 <main>
-	<div class="square square-left">
+	<!-- <div class="square square-left">
 		 <img src="<?php echo __BASE_URL__ ?>/images/v-1.png" class="img-square-left square-1" alt="">
 		 <img src="<?php echo __BASE_URL__ ?>/images/v-2.png" class="img-square-left square-2" alt="">
 		 <img src="<?php echo __BASE_URL__ ?>/images/v-3.png" class="img-square-left square-3" width="200" height="200" alt="">
@@ -15,27 +15,31 @@
 			 <img src="<?php echo __BASE_URL__ ?>/images/v-4.png" class="img-square-right square-4" alt="">
 			 <img src="<?php echo __BASE_URL__ ?>/images/v-3.png" class="img-square-right square-5" width="200" height="200" alt="">
 		</div>
-	</div>   
+	</div>    -->
+	<?php 
+		$dong1 = get_field('heading_h1');
+	?>
 	<section class="box-about">
 		<div class="container">
-			<div class="row">  
+			<div class="row">   
 				<div class="col-md-5">
 					<div class="txt-about">
-						<h1 class="wow fadeInUp" data-wow-delay=".2s">BESTAY</h1>
+						<h1 class="wow fadeInUp" data-wow-delay=".2s"><?php echo get_field('heading_h1') ?></h1>
 						<div class="desc wow fadeInUp" data-wow-delay=".3s">
-							The blockchain technology application platform, that provides the best solution for accommodation
+							<?php echo get_field('dong_so_2') ?>
 						</div>
-						<h3 class="wow fadeInUp" data-wow-delay=".4s"><a href="">Whitepaper <i class="fa fa-caret-right"></i></a></h3>
+						<h3 class="wow fadeInUp" data-wow-delay=".4s"><a href="<?php echo get_field('don_so_3_link_') ?>">Whitepaper <i class="fa fa-caret-right"></i></a></h3>
 						<div class="btn-about wow fadeInUp" data-wow-delay=".55s">
 							<ul class="list-inline">
-								<li class="list-inline-item"><a href="" class="ab-camp btn-grad">Campaigns</a></li>
-								<li class="list-inline-item"><a href="" class="ab-news">News</a></li>
+								<li class="list-inline-item"><a href="<?php echo get_field('link_nut_1') ?>" class="ab-camp btn-grad"><?php echo get_field('ten_nut_1') ?></a></li>
+								<li class="list-inline-item"><a href="<?php echo get_field('link_nut_2') ?>" class="ab-news"><?php echo get_field('ten_nut_2') ?></a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-7">
-					<div class="avarta wow fadeInUp" data-wow-delay=".2s"> <img src="<?php echo __BASE_URL__ ?>/images/ab-1.png" class="img-fluid" alt=""></div>
+					<!-- <div class="avarta wow fadeInUp" data-wow-delay=".2s"> <img src="<?php echo __BASE_URL__ ?>/images/ab-1.png" class="img-fluid" alt=""></div>  -->
+					<div class="avarta wow fadeInUp" data-wow-delay=".2s"> <img src="<?php echo get_field('anh_banner')['url'] ?>" class="img-fluid" alt=""></div>
 				</div>
 			</div>
 		</div>
@@ -198,6 +202,6 @@
 	</section>
 </main>
 
-<?php
-// get_sidebar(); 
-get_footer();
+<?php 
+
+get_footer(); 
